@@ -2,6 +2,8 @@
 
 Bu proje, oyun geliştirme süreçlerine yönelik soruları hızlı ve doğru yanıtlayabilen, yapay zekâ destekli bir sohbet botu geliştirmeyi amaçlamaktadır.
 
+# Proje Çalışmadığı noktada ulaşım sağlanabilecek Link:
+- https://colab.research.google.com/drive/1gbwReNQc8yTv17k8ITfRXQ4c8NxhGaMi?usp=sharing
 
 # 📌 Projenin Amacı
 
