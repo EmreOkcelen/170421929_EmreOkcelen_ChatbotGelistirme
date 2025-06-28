@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/51f1fb76-91a6-46a1-87d2-05a2b1ab1db3)# 🎮 Oyun Geliştirme Chatbot - LLM Tabanlı Oyun Geliştirme Asistanı
+# 🎮 Oyun Geliştirme Chatbot - LLM Tabanlı Oyun Geliştirme Asistanı
 
 Bu proje, oyun geliştirme süreçlerine yönelik soruları hızlı ve doğru yanıtlayabilen, yapay zekâ destekli bir sohbet botu geliştirmeyi amaçlamaktadır.
 
