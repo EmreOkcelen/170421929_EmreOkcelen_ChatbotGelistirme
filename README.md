@@ -147,12 +147,12 @@ Model eğitimi, Hugging Face’in **transformers** kütüphanesi kullanılarak g
 
  2) Modeli eğit -> Kodun ilgili kısmında model eğitimi yapılır. (Eğitilmiş model klasörü models/roberta_intent_model veya models/bert_intent_model olarak kaydedilmiştir.)
 
-![image](https://github.com/user-attachments/assets/38c08a5a-2136-4c0e-aef1-7955f7b7a791)
+    ![image](https://github.com/user-attachments/assets/38c08a5a-2136-4c0e-aef1-7955f7b7a791)
 
 
  3) Modeli eğittikten sonra Niyet Modellerini, OpenAI Chatbot mesaj sistemini ve uygulama üzerinden güncel sonuçları görmek üzere değerlendirmeler Kod dizimini çalıştır
 
-![image](https://github.com/user-attachments/assets/6da394b1-2dca-4aa2-a311-fc80a4587716)
+    ![image](https://github.com/user-attachments/assets/6da394b1-2dca-4aa2-a311-fc80a4587716)
 
     
  4) Chatbot'u başlat
@@ -160,7 +160,7 @@ Model eğitimi, Hugging Face’in **transformers** kütüphanesi kullanılarak g
   - streamlit run app.py
   - Ngrok ile internete aç
 
-![image](https://github.com/user-attachments/assets/794be457-3650-4cbc-9025-e9638979e4b2)
+    ![image](https://github.com/user-attachments/assets/794be457-3650-4cbc-9025-e9638979e4b2)
 
 
 
@@ -171,16 +171,16 @@ Modelin doğruluk ve F1 skoru gibi performans metrikleri **Trainer.evaluate()** 
 
  - **BERT Modeli Değerlendirme Sonuçları:**
 
-![WhatsApp Görsel 2025-06-28 saat 16 22 12_0c001726](https://github.com/user-attachments/assets/3ad1f981-6714-410a-ace7-7b785d906650)
+    ![WhatsApp Görsel 2025-06-28 saat 16 22 12_0c001726](https://github.com/user-attachments/assets/3ad1f981-6714-410a-ace7-7b785d906650)
 
-![WhatsApp Görsel 2025-06-28 saat 16 22 50_deabb03b](https://github.com/user-attachments/assets/ad8e1763-2e60-41ca-a1a7-725301ada222)
+   ![WhatsApp Görsel 2025-06-28 saat 16 22 50_deabb03b](https://github.com/user-attachments/assets/ad8e1763-2e60-41ca-a1a7-725301ada222)
 
 
  - **RoBERTa Modeli Değerlendirme Sonuçları:**
 
-![WhatsApp Görsel 2025-06-28 saat 16 42 19_acf0608f](https://github.com/user-attachments/assets/eff0a5fd-1da0-45f3-8caa-4d45111914c3)
+    ![WhatsApp Görsel 2025-06-28 saat 16 42 19_acf0608f](https://github.com/user-attachments/assets/eff0a5fd-1da0-45f3-8caa-4d45111914c3)
 
-![WhatsApp Görsel 2025-06-28 saat 16 42 07_5b8b9a8a](https://github.com/user-attachments/assets/5d40e308-9424-4c08-9adc-2c2208701309)
+  ![WhatsApp Görsel 2025-06-28 saat 16 42 07_5b8b9a8a](https://github.com/user-attachments/assets/5d40e308-9424-4c08-9adc-2c2208701309)
 
 
 # 📊 Model Performansı Karşılaştırma Tablosu
@@ -197,24 +197,24 @@ Proje kapsamında geliştirilen web tabanlı arayüz, **Streamlit** kullanılara
 
    2) **LLM Yanıtı (GPT-3.5):** Tahmin edilen niyet, kullanıcının girdisiyle birlikte OpenAI API'ye gönderilir ve kısa, konuya uygun bir yanıt üretilir.
 
-![WhatsApp Görsel 2025-06-28 saat 16 21 23_7e72e988](https://github.com/user-attachments/assets/4382dd6b-6d48-461b-a5aa-3ffcc1146888)
+      ![WhatsApp Görsel 2025-06-28 saat 16 21 23_7e72e988](https://github.com/user-attachments/assets/4382dd6b-6d48-461b-a5aa-3ffcc1146888)
 
 
    3) **Yanıt ve Niyet Görselleştirme:** Tahmin edilen niyet emojili olarak sunulur ve GPT yanıtı bilgilendirici kutuda gösterilir.
 
    4) **Geçmiş Görüntüleme:** Son 5 giriş, arayüzün sol panelinde zaman damgası ve model bilgisiyle birlikte görüntülenebilir.
 
-![WhatsApp Görsel 2025-06-28 saat 15 58 05_a6e71454](https://github.com/user-attachments/assets/252d0b61-3109-47bb-a3f8-dea115b41cba)
+      ![WhatsApp Görsel 2025-06-28 saat 15 58 05_a6e71454](https://github.com/user-attachments/assets/252d0b61-3109-47bb-a3f8-dea115b41cba)
 
 
    5) **Model Performans Karşılaştırması:** Ayrı bir sekmede Precision, Recall ve F1 metriklerine göre BERT ve RoBERTa modelleri kıyaslanabilir. Sonuçlar tablo, bar chart ve radar chart ile görselleştirilir.
 
-![WhatsApp Görsel 2025-06-28 saat 16 47 30_8b790e44](https://github.com/user-attachments/assets/0d045fe3-9d88-4824-af17-8f1520e2fea2)
+      ![WhatsApp Görsel 2025-06-28 saat 16 47 30_8b790e44](https://github.com/user-attachments/assets/0d045fe3-9d88-4824-af17-8f1520e2fea2)
 
 
    6) **Confusion Matrix:** Üçüncü sekmede, her iki modelin sınıflandırma doğruluğu karışıklık matrisi üzerinden detaylı biçimde analiz edilebilir.
 
-![WhatsApp Görsel 2025-06-28 saat 16 48 58_98ad2e3a](https://github.com/user-attachments/assets/135e1312-de82-492f-be20-1dca7f5505dc)
+      ![WhatsApp Görsel 2025-06-28 saat 16 48 58_98ad2e3a](https://github.com/user-attachments/assets/135e1312-de82-492f-be20-1dca7f5505dc)
 
 
 
