@@ -45,9 +45,9 @@ Projede kullanılan başlıca intentler şunlardır:
 
 • **AIHelp** – Yapay zeka/savaşçı yapımı desteği
 
-• ControlScriptHelp – Kontrol ve input scriptleri yardımı
+• **ControlScriptHelp** – Kontrol ve input scriptleri yardımı
 
-• AssetHelp – Oyun varlıkları (asset) yardımı
+• **AssetHelp** – Oyun varlıkları (asset) yardımı
 
 
 # 🔨 Veri Üretim Süreci
