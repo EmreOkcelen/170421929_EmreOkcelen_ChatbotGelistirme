@@ -141,77 +141,137 @@ Model eğitimi, Hugging Face’in **transformers** kütüphanesi kullanılarak g
 # 🔓 Kullanım
 
  1) Gereksinimleri yükle -> pip install -r requirements.txt
+    
     ![image](https://github.com/user-attachments/assets/d6efbf80-f3d4-4588-b96a-21cb08564c65)
 
 
- 3) Modeli eğit -> Kodun ilgili kısmında model eğitimi yapılır. (Eğitilmiş model klasörü models/roberta_intent_model veya models/bert_intent_model olarak kaydedilmiştir.)
+ 2) Modeli eğit -> Kodun ilgili kısmında model eğitimi yapılır. (Eğitilmiş model klasörü models/roberta_intent_model veya models/bert_intent_model olarak kaydedilmiştir.)
 
+![image](https://github.com/user-attachments/assets/38c08a5a-2136-4c0e-aef1-7955f7b7a791)
+
+
+ 3) Modeli eğittikten sonra Niyet Modellerini, OpenAI Chatbot mesaj sistemini ve uygulama üzerinden güncel sonuçları görmek üzere değerlendirmeler Kod dizimini çalıştır
+
+![image](https://github.com/user-attachments/assets/6da394b1-2dca-4aa2-a311-fc80a4587716)
+
+    
  4) Chatbot'u başlat
 
   - streamlit run app.py
   - Ngrok ile internete aç
 
+![image](https://github.com/user-attachments/assets/794be457-3650-4cbc-9025-e9638979e4b2)
 
-📊 Sonuçlar
 
-Modelin doğruluk ve F1 skoru gibi performans metrikleri Trainer.evaluate() ile hesaplanmış ve bir Confusion Matrix oluşturulmuştur.
 
-BERT Modeli Değerlendirme Sonuçları:
 
-image image
+# 📊 Sonuçlar
 
-RoBERTa Modeli Değerlendirme Sonuçları:
+Modelin doğruluk ve F1 skoru gibi performans metrikleri **Trainer.evaluate()** ile hesaplanmış ve bir **Confusion Matrix** oluşturulmuştur.
 
-image image
+ - **BERT Modeli Değerlendirme Sonuçları:**
 
-📊 Model Performansı Karşılaştırma Tablosu
+![WhatsApp Görsel 2025-06-28 saat 16 22 12_0c001726](https://github.com/user-attachments/assets/3ad1f981-6714-410a-ace7-7b785d906650)
 
-image
+![WhatsApp Görsel 2025-06-28 saat 16 22 50_deabb03b](https://github.com/user-attachments/assets/ad8e1763-2e60-41ca-a1a7-725301ada222)
 
-🖥️ Chatbot Arayüzü
 
-Streamlit ile geliştirilen arayüz sayesinde kullanıcılar metin giriş alanına üniversiteyle ilgili sorularını yazabilirler. Sistem, soru metnini RoBERTa veya BERT modeline gönderir ve niyeti tahmin eder. Bu niyeti GPT-3.5'e ileterek uygun yanıt üretilmesini sağlar. Kullanıcıya tahmin edilen niyet ve yanıtı gösterir.
+ - **RoBERTa Modeli Değerlendirme Sonuçları:**
 
-Streamlit Ekran Görüntüleri
+![WhatsApp Görsel 2025-06-28 saat 16 42 19_acf0608f](https://github.com/user-attachments/assets/eff0a5fd-1da0-45f3-8caa-4d45111914c3)
 
-RoBERTa + GPT3.5 Destekli Chatbot Tasarımı
+![WhatsApp Görsel 2025-06-28 saat 16 42 07_5b8b9a8a](https://github.com/user-attachments/assets/5d40e308-9424-4c08-9adc-2c2208701309)
 
-Greeting Intent
 
-image
+# 📊 Model Performansı Karşılaştırma Tablosu
 
-DormitoryInfo Intent
+![WhatsApp Görsel 2025-06-28 saat 16 50 09_1ef14a9f](https://github.com/user-attachments/assets/7b3a20c6-cbfe-40e4-ae9e-2d9db3aaf8bb)
 
-image
 
-Registration Intent
+# 🖥️ Chatbot Arayüzü
 
-image
+Proje kapsamında geliştirilen web tabanlı arayüz, **Streamlit** kullanılarak kullanıcı dostu bir etkileşim ortamı sunar. Arayüz, oyun geliştiricilere yönelik soruların otomatik olarak sınıflandırılmasını ve bu sınıflamaya uygun GPT-3.5 yanıtlarının üretilmesini sağlar.
 
-EventInfo Intent
+ - **🎛️ Temel Özellikler:**
+   1) **Niyet Sınıflandırması:** Kullanıcının yazdığı metin, seçilen modele (BERT veya RoBERTa) iletilerek niyeti (intent) tahmin edilir.
 
-image
+   2) **LLM Yanıtı (GPT-3.5):** Tahmin edilen niyet, kullanıcının girdisiyle birlikte OpenAI API'ye gönderilir ve kısa, konuya uygun bir yanıt üretilir.
 
-ContactInfo Intent
+![WhatsApp Görsel 2025-06-28 saat 16 21 23_7e72e988](https://github.com/user-attachments/assets/4382dd6b-6d48-461b-a5aa-3ffcc1146888)
 
-image
 
-Goodbye Intent
+   3) **Yanıt ve Niyet Görselleştirme:** Tahmin edilen niyet emojili olarak sunulur ve GPT yanıtı bilgilendirici kutuda gösterilir.
 
-image
+   4) **Geçmiş Görüntüleme:** Son 5 giriş, arayüzün sol panelinde zaman damgası ve model bilgisiyle birlikte görüntülenebilir.
 
-ScholarshipInfo Intent
+![WhatsApp Görsel 2025-06-28 saat 15 58 05_a6e71454](https://github.com/user-attachments/assets/252d0b61-3109-47bb-a3f8-dea115b41cba)
 
-image
 
-DepartmentInfo Intent
+   5) **Model Performans Karşılaştırması:** Ayrı bir sekmede Precision, Recall ve F1 metriklerine göre BERT ve RoBERTa modelleri kıyaslanabilir. Sonuçlar tablo, bar chart ve radar chart ile görselleştirilir.
 
-image
+![WhatsApp Görsel 2025-06-28 saat 16 47 30_8b790e44](https://github.com/user-attachments/assets/0d045fe3-9d88-4824-af17-8f1520e2fea2)
 
-Reject Intent
 
-image
+   6) **Confusion Matrix:** Üçüncü sekmede, her iki modelin sınıflandırma doğruluğu karışıklık matrisi üzerinden detaylı biçimde analiz edilebilir.
 
-BERT + GPT3.5 Destekli Chatbot Tasarımı
+![WhatsApp Görsel 2025-06-28 saat 16 48 58_98ad2e3a](https://github.com/user-attachments/assets/135e1312-de82-492f-be20-1dca7f5505dc)
 
-image
+
+
+# 🖼️ Intent’lerin Ekran Görüntüleri
+
+
+**👋 Greeting – Selamlama**
+
+![WhatsApp Görsel 2025-06-28 saat 15 41 07_1007a24f](https://github.com/user-attachments/assets/d6349ed2-07eb-4210-89f6-f5260851a5f6)
+
+
+**📴 Goodbye – Vedalaşma**
+
+![WhatsApp Görsel 2025-06-28 saat 15 54 37_144d9c15](https://github.com/user-attachments/assets/c175c516-794d-42ea-882c-c5e845980b57)
+
+
+**❓ Reject – Anlamama / Konu Dışı**
+
+![WhatsApp Görsel 2025-06-28 saat 15 56 50_61bd63e5](https://github.com/user-attachments/assets/6ebc9e4e-d23e-4678-988d-44bfcc51c6e4)
+
+
+**🛠️ GameEngineInfo – Oyun Motoru Bilgisi**
+
+![WhatsApp Görsel 2025-06-28 saat 15 40 51_fa17c32b](https://github.com/user-attachments/assets/b8f484f5-0f94-460e-ad22-fbf9fa290a26)
+
+
+**🐞 BugFix – Hata Giderme**
+
+![WhatsApp Görsel 2025-06-28 saat 15 45 29_9b8f6152](https://github.com/user-attachments/assets/75e23c8d-946e-4f2a-8b2e-ab7fd153494f)
+
+
+**🎨 DesignAdvice – Tasarım Tavsiyesi**
+
+![WhatsApp Görsel 2025-06-28 saat 15 46 03_1fb77fec](https://github.com/user-attachments/assets/ae0e9648-7643-40aa-a560-aa072fd1a947)
+
+
+**⚡ PerformanceOptimize – Performans Optimizasyonu**
+
+![WhatsApp Görsel 2025-06-28 saat 16 02 56_5e9f8d61](https://github.com/user-attachments/assets/b4d997dd-edfe-487c-b1a1-f19eaa59ba36)
+
+
+**🚀 PublishHelp – Yayınlama Yardımı**
+
+![WhatsApp Görsel 2025-06-28 saat 16 03 46_e0d32949](https://github.com/user-attachments/assets/b0d37d02-7f87-46dc-8d93-4155e52a9931)
+
+
+**🤖 AIHelp – Yapay Zeka Yardımı**
+
+![WhatsApp Görsel 2025-06-28 saat 15 42 49_bf862ee9](https://github.com/user-attachments/assets/e66b754f-65da-4b4f-a6c3-a5c84cba3bcd)
+
+
+**🎮 ControlScriptHelp – Kontroller ve Input**
+
+![WhatsApp Görsel 2025-06-28 saat 16 00 21_4ef91056](https://github.com/user-attachments/assets/8dc9bc3d-1509-4bf4-8db8-7b6fced44435)
+
+
+**📦 AssetHelp – Asset Yönetimi**
+
+![WhatsApp Görsel 2025-06-28 saat 15 53 38_5fbbcfb1](https://github.com/user-attachments/assets/9ebf7d54-569b-4334-9727-086d9b522a7c)
+
